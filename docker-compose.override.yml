@@ -1,0 +1,13 @@
+version: "3"
+services:
+  caddy:
+    ports:
+      - "8000:80"
+      - "8001:8001"
+  varnish:
+    depends_on:
+      - caddy
+    ports:
+      - "80:80"
+
+

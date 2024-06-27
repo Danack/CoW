@@ -1,0 +1,23 @@
+version: "3"
+services:
+  caddy:
+    build: containers/caddy
+    volumes:
+      - .:/var/app
+#    depends_on:
+ #    - php_fpm
+    networks:
+      default_network:
+  varnish:
+    build: containers/varnish
+    environment:
+      CACHE_SIZE: 128m
+    networks:
+      default_network:
+    volumes:
+      - ./:/var/app
+    depends_on:
+      - caddy
+networks:
+  default_network:
+
