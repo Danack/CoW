@@ -3,17 +3,17 @@
 # Add this to cron
 #
 #
-# */2 * * * * /usr/bin/flock -w 0 /var/home/Bristolian/Bristolian/cron.lock /bin/sh /var/home/Bristolian/Bristolian/scripts/update.sh >> /var/log/deployer/bristolian.log 2>&1
+# */2 * * * * /usr/bin/flock -w 0 /var/home/CrucibleOfWokeness/CrucibleOfWokeness/cron.lock /bin/sh /var/home/CrucibleOfWokeness/CrucibleOfWokeness/scripts/update.sh >> /var/log/deployer/bristolian.log 2>&1
 #
 # If someone does a manual pull, use this to restore file permissions
 # chown deployer -R .
 #
-# ln -s /var/log/deployer/bristolian.log /var/home/Bristolian/Bristolian/deployer.log
+# ln -s /var/log/deployer/bristolian.log /var/home/CrucibleOfWokeness/CrucibleOfWokeness/deployer.log
 #
-# su - deployer -c "ln /var/log/deployer/bristolian.log /var/home/Bristolian/Bristolian/deployer.log"
+# su - deployer -c "ln /var/log/deployer/bristolian.log /var/home/CrucibleOfWokeness/CrucibleOfWokeness/deployer.log"
 
 
-cd /var/home/Bristolian/Bristolian
+cd /var/home/CrucibleOfWokeness/CrucibleOfWokeness
 
 git fetch
 
