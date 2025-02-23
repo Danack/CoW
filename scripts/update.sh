@@ -35,7 +35,7 @@ elif [ "$LOCAL" = "$BASE" ]; then
     git pull
     chown -R deployer:deployer *
     sh runProd.sh
-elif [ "$REMOTE = "$BASE" ]; then
+elif [ "$REMOTE" = "$BASE" ]; then
     echo "Need to push server changes. That is not good"
 else
     echo "Diverged"
