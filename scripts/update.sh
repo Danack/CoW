@@ -36,7 +36,7 @@ elif [ "$LOCAL" = "$BASE" ]; then
     chown -R deployer:deployer *
     sh runProd.sh
 elif [ "$REMOTE = "$BASE" ]; then
-    echo "Need to push server changes. That's not good"
+    echo "Need to push server changes. That is not good"
 else
     echo "Diverged"
 fi
