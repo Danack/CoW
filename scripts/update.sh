@@ -28,15 +28,15 @@ timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 # echo "REMOTE = ${REMOTE}";
 # echo "BASE = ${BASE}";
 
-if [ $LOCAL = $REMOTE ]; then
+if [ "$LOCAL" = "$REMOTE" ]; then
     echo "Up-to-date at ${timestamp}"
-elif [ $LOCAL = $BASE ]; then
+elif [ "$LOCAL" = "$BASE" ]; then
     echo "Need to pull at ${timestamp}"
     git pull
     chown -R deployer:deployer *
     sh runProd.sh
-elif [ $REMOTE = $BASE ]; then
-    echo "Need to push."
+elif [ "$REMOTE = "$BASE" ]; then
+    echo "Need to push server changes. That's not good"
 else
     echo "Diverged"
 fi
